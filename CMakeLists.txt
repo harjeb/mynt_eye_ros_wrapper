@@ -82,11 +82,8 @@ catkin_package(
 
 get_filename_component(SDK_DIR "${PROJECT_SOURCE_DIR}" ABSOLUTE)
 
-LIST(APPEND CMAKE_PREFIX_PATH ${SDK_DIR}/glog/_build)
-find_package(glog REQUIRED)
-message(STATUS "Found glog: ${glog_VERSION}")
 
-LIST(APPEND CMAKE_PREFIX_PATH ${SDK_DIR}/_install/lib/cmake)
+LIST(APPEND CMAKE_PREFIX_PATH /usr/local/lib/cmake)
 find_package(mynteye REQUIRED)
 message(STATUS "Found mynteye: ${mynteye_VERSION}")
 
