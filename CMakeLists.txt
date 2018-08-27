@@ -80,9 +80,9 @@ catkin_package(
   CATKIN_DEPENDS cv_bridge geometry_msgs image_transport nodelet roscpp sensor_msgs std_msgs tf
 )
 
-get_filename_component(SDK_DIR "${PROJECT_SOURCE_DIR}/../../../.." ABSOLUTE)
+get_filename_component(SDK_DIR "${PROJECT_SOURCE_DIR}" ABSOLUTE)
 
-LIST(APPEND CMAKE_PREFIX_PATH ${SDK_DIR}/third_party/glog/_build)
+LIST(APPEND CMAKE_PREFIX_PATH ${SDK_DIR}/glog/_build)
 find_package(glog REQUIRED)
 message(STATUS "Found glog: ${glog_VERSION}")
 

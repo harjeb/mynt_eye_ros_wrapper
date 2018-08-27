@@ -1,0 +1,442 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_294a4/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_294a4.dir/build.make CMakeFiles/cmTC_294a4.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_294a4.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_294a4.dir/CheckSymbolExists.c.o   -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_294a4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_294a4.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_294a4.dir/CheckSymbolExists.c.o  -o cmTC_294a4 -rdynamic 
+CMakeFiles/cmTC_294a4.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_294a4.dir/build.make:97: recipe for target 'cmTC_294a4' failed
+make[2]: *** [cmTC_294a4] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_294a4/fast' failed
+make[1]: *** [cmTC_294a4/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+File /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_eda7e/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_eda7e.dir/build.make CMakeFiles/cmTC_eda7e.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eda7e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_eda7e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_eda7e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eda7e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_eda7e.dir/CheckFunctionExists.c.o  -o cmTC_eda7e -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_eda7e.dir/build.make:97: recipe for target 'cmTC_eda7e' failed
+make[2]: *** [cmTC_eda7e] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_eda7e/fast' failed
+make[1]: *** [cmTC_eda7e/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_21844/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_21844.dir/build.make CMakeFiles/cmTC_21844.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21844.dir/CheckIncludeFile.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_21844.dir/CheckIncludeFile.c.o   -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:23: fatal error: libunwind.h: 没有那个文件或目录
+compilation terminated.
+CMakeFiles/cmTC_21844.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_21844.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_21844.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_21844/fast' failed
+make[1]: *** [cmTC_21844/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file unordered_map exists failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_a2cf2/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_a2cf2.dir/build.make CMakeFiles/cmTC_a2cf2.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a2cf2.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_a2cf2.dir/CheckIncludeFile.cxx.o -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/5/unordered_map:35:0,
+                 from /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/5/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+  ^
+CMakeFiles/cmTC_a2cf2.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a2cf2.dir/CheckIncludeFile.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_a2cf2.dir/CheckIncludeFile.cxx.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a2cf2/fast' failed
+make[1]: *** [cmTC_a2cf2/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file unordered_set exists failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_3dbd8/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_3dbd8.dir/build.make CMakeFiles/cmTC_3dbd8.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3dbd8.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_3dbd8.dir/CheckIncludeFile.cxx.o -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /usr/include/c++/5/unordered_set:35:0,
+                 from /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/5/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+ #error This file requires compiler and library support \
+  ^
+CMakeFiles/cmTC_3dbd8.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3dbd8.dir/CheckIncludeFile.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_3dbd8.dir/CheckIncludeFile.cxx.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3dbd8/fast' failed
+make[1]: *** [cmTC_3dbd8/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned __int16 failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_180ad/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_180ad.dir/build.make CMakeFiles/cmTC_180ad.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_180ad.dir/HAVE___UINT16.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_180ad.dir/HAVE___UINT16.c.o   -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: error: expected ‘)’ before ‘__int16’
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: error: expected ‘)’ before ‘__int16’
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:20:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 1000)%10)),
+            ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: error: expected ‘)’ before ‘__int16’
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:21:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 100)%10)),
+            ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: error: expected ‘)’ before ‘__int16’
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:22:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10)%10)),
+            ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:17:31: error: expected ‘)’ before ‘__int16’
+ #define SIZE (sizeof(unsigned __int16))
+                               ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:23:12: note: in expansion of macro ‘SIZE’
+   ('0' +  (SIZE    % 10)),
+            ^
+CMakeFiles/cmTC_180ad.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_180ad.dir/HAVE___UINT16.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_180ad.dir/HAVE___UINT16.c.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_180ad/fast' failed
+make[1]: *** [cmTC_180ad/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CheckTypeSize/HAVE___UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(unsigned __int16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function dladdr exists failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_8072b/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_8072b.dir/build.make CMakeFiles/cmTC_8072b.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8072b.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=dladdr   -o CMakeFiles/cmTC_8072b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8072b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8072b.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=dladdr    CMakeFiles/cmTC_8072b.dir/CheckFunctionExists.c.o  -o cmTC_8072b -rdynamic 
+CMakeFiles/cmTC_8072b.dir/CheckFunctionExists.c.o：在函数‘main’中：
+CheckFunctionExists.c:(.text+0x15)：对‘dladdr’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8072b.dir/build.make:97: recipe for target 'cmTC_8072b' failed
+make[2]: *** [cmTC_8072b] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8072b/fast' failed
+make[1]: *** [cmTC_8072b/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+
+Performing C++ SOURCE FILE Test HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_6135d/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_6135d.dir/build.make CMakeFiles/cmTC_6135d.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6135d.dir/src.cxx.o
+/usr/bin/c++     -DHAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS   -Wunnamed-type-template-args -o CMakeFiles/cmTC_6135d.dir/src.cxx.o -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-Wunnamed-type-template-args'
+CMakeFiles/cmTC_6135d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6135d.dir/src.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_6135d.dir/src.cxx.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6135d/fast' failed
+make[1]: *** [cmTC_6135d/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }
+Determining if the function get_static_proc_name exists in the unwind failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_def8a/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_def8a.dir/build.make CMakeFiles/cmTC_def8a.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_def8a.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=get_static_proc_name   -o CMakeFiles/cmTC_def8a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_def8a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_def8a.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=get_static_proc_name    CMakeFiles/cmTC_def8a.dir/CheckFunctionExists.c.o  -o cmTC_def8a -rdynamic -lunwind 
+/usr/bin/ld: 找不到 -lunwind
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_def8a.dir/build.make:97: recipe for target 'cmTC_def8a' failed
+make[2]: *** [cmTC_def8a] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_def8a/fast' failed
+make[1]: *** [cmTC_def8a/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function UnDecorateSymbolName exists in the dbghelp failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_fc84f/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_fc84f.dir/build.make CMakeFiles/cmTC_fc84f.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc84f.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=UnDecorateSymbolName   -o CMakeFiles/cmTC_fc84f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fc84f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc84f.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=UnDecorateSymbolName    CMakeFiles/cmTC_fc84f.dir/CheckFunctionExists.c.o  -o cmTC_fc84f -rdynamic -ldbghelp 
+/usr/bin/ld: 找不到 -ldbghelp
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fc84f.dir/build.make:97: recipe for target 'cmTC_fc84f' failed
+make[2]: *** [cmTC_fc84f] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fc84f/fast' failed
+make[1]: *** [cmTC_fc84f/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_RWLOCK failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_eeb21/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_eeb21.dir/build.make CMakeFiles/cmTC_eeb21.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eeb21.dir/src.c.o
+/usr/bin/cc    -DHAVE_RWLOCK   -o CMakeFiles/cmTC_eeb21.dir/src.c.o   -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_eeb21
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eeb21.dir/link.txt --verbose=1
+/usr/bin/cc   -DHAVE_RWLOCK    CMakeFiles/cmTC_eeb21.dir/src.c.o  -o cmTC_eeb21 -rdynamic 
+CMakeFiles/cmTC_eeb21.dir/src.c.o：在函数‘main’中：
+src.c:(.text+0x24)：对‘pthread_rwlock_init’未定义的引用
+src.c:(.text+0x30)：对‘pthread_rwlock_rdlock’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_eeb21.dir/build.make:97: recipe for target 'cmTC_eeb21' failed
+make[2]: *** [cmTC_eeb21] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_eeb21/fast' failed
+make[1]: *** [cmTC_eeb21/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#define _XOPEN_SOURCE 500
+#include <pthread.h>
+int main(void)
+{
+  pthread_rwlock_t l;
+  pthread_rwlock_init(&l, NULL);
+  pthread_rwlock_rdlock(&l);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE___DECLSPEC failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_e97ba/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_e97ba.dir/build.make CMakeFiles/cmTC_e97ba.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e97ba.dir/src.c.o
+/usr/bin/cc    -DHAVE___DECLSPEC   -o CMakeFiles/cmTC_e97ba.dir/src.c.o   -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c:2:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ __declspec(selectany) int a;
+ ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c: In function ‘__declspec’:
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c:3:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+ int main(void) { return 0; }
+                ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c:2:1: warning: type of ‘selectany’ defaults to ‘int’ [-Wimplicit-int]
+ __declspec(selectany) int a;
+ ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c:2:27: error: declaration for parameter ‘a’ but no such parameter
+ __declspec(selectany) int a;
+                           ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.c:3:16: error: expected ‘{’ at end of input
+ int main(void) { return 0; }
+                ^
+CMakeFiles/cmTC_e97ba.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_e97ba.dir/src.c.o' failed
+make[2]: *** [CMakeFiles/cmTC_e97ba.dir/src.c.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e97ba/fast' failed
+make[1]: *** [cmTC_e97ba/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+__declspec(selectany) int a;
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test STL_NO_NAMESPACE failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_5ff7b/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_5ff7b.dir/build.make CMakeFiles/cmTC_5ff7b.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5ff7b.dir/src.cxx.o
+/usr/bin/c++     -DSTL_NO_NAMESPACE   -o CMakeFiles/cmTC_5ff7b.dir/src.cxx.o -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx:3:1: error: ‘vector’ does not name a type
+ vector<int> t; int main() { }
+ ^
+CMakeFiles/cmTC_5ff7b.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5ff7b.dir/src.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_5ff7b.dir/src.cxx.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5ff7b/fast' failed
+make[1]: *** [cmTC_5ff7b/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <vector>
+vector<int> t; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_MSVC_TLS failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_7c108/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_7c108.dir/build.make CMakeFiles/cmTC_7c108.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7c108.dir/src.cxx.o
+/usr/bin/c++     -DHAVE_MSVC_TLS   -o CMakeFiles/cmTC_7c108.dir/src.cxx.o -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx:2:11: error: expected constructor, destructor, or type conversion before ‘(’ token
+ __declspec(thread) int tls;
+           ^
+CMakeFiles/cmTC_7c108.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_7c108.dir/src.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_7c108.dir/src.cxx.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_7c108/fast' failed
+make[1]: *** [cmTC_7c108/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+__declspec(thread) int tls;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_TLS failed with the following output:
+Change Dir: /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp
+
+Run Build Command:"make" "cmTC_3c05c/fast"
+make[1]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+make -f CMakeFiles/cmTC_3c05c.dir/build.make CMakeFiles/cmTC_3c05c.dir/build
+make[2]: Entering directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3c05c.dir/src.cxx.o
+/usr/bin/c++     -DHAVE_CXX11_TLS   -o CMakeFiles/cmTC_3c05c.dir/src.cxx.o -c /home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx:2:1: error: ‘thread_local’ does not name a type
+ thread_local int tls;
+ ^
+/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp/src.cxx:2:1: note: C++11 ‘thread_local’ only available with -std=c++11 or -std=gnu++11
+CMakeFiles/cmTC_3c05c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3c05c.dir/src.cxx.o' failed
+make[2]: *** [CMakeFiles/cmTC_3c05c.dir/src.cxx.o] Error 1
+make[2]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3c05c/fast' failed
+make[1]: *** [cmTC_3c05c/fast] Error 2
+make[1]: Leaving directory '/home/gege/test/MYNT-EYE-SDK-2/third_party/glog/_build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+thread_local int tls;
+int main() { }
+
