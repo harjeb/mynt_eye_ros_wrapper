@@ -45,6 +45,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   tf
+  libmynteye
 )
 
 checkPackage("cv_bridge" "")
@@ -55,6 +56,7 @@ checkPackage("roscpp" "")
 checkPackage("sensor_msgs" "")
 checkPackage("std_msgs" "")
 checkPackage("tf" "")
+checkPackage("libmynteye" "")
 
 find_package(OpenCV REQUIRED)
 message(STATUS "Found OpenCV: ${OpenCV_VERSION}")
@@ -83,7 +85,7 @@ catkin_package(
 get_filename_component(SDK_DIR "${PROJECT_SOURCE_DIR}" ABSOLUTE)
 
 
-LIST(APPEND CMAKE_PREFIX_PATH /usr/local/lib/cmake)
+LIST(APPEND CMAKE_PREFIX_PATH /opt/ros/kinetic/lib/cmake)
 find_package(mynteye REQUIRED)
 message(STATUS "Found mynteye: ${mynteye_VERSION}")
 
