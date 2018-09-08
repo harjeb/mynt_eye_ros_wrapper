@@ -45,7 +45,6 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   std_msgs
   tf
-  libmynteye
 )
 
 checkPackage("cv_bridge" "")
@@ -56,7 +55,6 @@ checkPackage("roscpp" "")
 checkPackage("sensor_msgs" "")
 checkPackage("std_msgs" "")
 checkPackage("tf" "")
-checkPackage("libmynteye" "")
 
 find_package(OpenCV REQUIRED)
 message(STATUS "Found OpenCV: ${OpenCV_VERSION}")
