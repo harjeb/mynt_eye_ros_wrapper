@@ -87,10 +87,10 @@ if(NOT mynteye_WITH_API)
   message(FATAL_ERROR "Must with API layer :(")
 endif()
 
-include(${SDK_DIR}/cmake/DetectOpenCV.cmake)
+include(cmake/DetectOpenCV.cmake)
 
 if(mynteye_WITH_GLOG)
-  include(${SDK_DIR}/cmake/DetectGLog.cmake)
+  include(cmake/DetectGLog.cmake)
 endif()
 
 # targets

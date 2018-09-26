@@ -22,3 +22,7 @@ Forthcoming
 0.1.2 (2018-09-26)
 ------------------
 * add libopencv-dev
+
+0.1.3 (2018-09-26)
+------------------
+* fix opencv detect
