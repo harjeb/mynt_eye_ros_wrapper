@@ -15,8 +15,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(mynt_eye_ros_wrapper)
 
-get_filename_component(SDK_DIR "${PROJECT_SOURCE_DIR}/../../../.." ABSOLUTE)
-
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif()
@@ -39,7 +37,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   geometry_msgs
   image_transport
-  message_runtime
+  message_generation
   nodelet
   roscpp
   sensor_msgs
@@ -50,6 +48,7 @@ find_package(catkin REQUIRED COMPONENTS
 checkPackage("cv_bridge" "")
 checkPackage("geometry_msgs" "")
 checkPackage("image_transport" "")
+checkPackage("message_generation" "")
 checkPackage("nodelet" "")
 checkPackage("roscpp" "")
 checkPackage("sensor_msgs" "")
@@ -57,11 +56,6 @@ checkPackage("std_msgs" "")
 checkPackage("tf" "")
 
 ## messages
-
-add_message_files(
-  FILES
-  Temp.msg
-)
 
 add_service_files(
   FILES
@@ -74,12 +68,14 @@ generate_messages(
 )
 
 catkin_package(
-  CATKIN_DEPENDS cv_bridge geometry_msgs image_transport nodelet roscpp sensor_msgs std_msgs tf
+  CATKIN_DEPENDS cv_bridge geometry_msgs image_transport message_runtime nodelet roscpp sensor_msgs std_msgs tf
 )
 
-get_filename_component(SDK_DIR "${PROJECT_SOURCE_DIR}/../../../.." ABSOLUTE)
+#get_filename_component(SDK_DIR "${PROJECT_SOURCE_DIR}/../../../.." ABSOLUTE)
+#LIST(APPEND CMAKE_PREFIX_PATH ${SDK_DIR}/_install/lib/cmake)
 
-LIST(APPEND CMAKE_PREFIX_PATH /opt/ros/kinetic/lib/cmake)
+LIST(APPEND CMAKE_MODULE_PATH cmake)
+
 find_package(mynteye REQUIRED)
 message(STATUS "Found mynteye: ${mynteye_VERSION}")
 
@@ -87,10 +83,10 @@ if(NOT mynteye_WITH_API)
   message(FATAL_ERROR "Must with API layer :(")
 endif()
 
-include(cmake/DetectOpenCV.cmake)
+find_package(OpenCV REQUIRED)
 
 if(mynteye_WITH_GLOG)
-  include(cmake/DetectGLog.cmake)
+  find_package(glog REQUIRED)
 endif()
 
 # targets
@@ -99,6 +95,7 @@ add_compile_options(-std=c++11)
 
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  ${SDK_DIR}/src
 )
 
 set(LINK_LIBS
@@ -109,6 +106,7 @@ set(LINK_LIBS
 
 add_library(mynteye_wrapper src/wrapper_nodelet.cc)
 target_link_libraries(mynteye_wrapper ${LINK_LIBS})
+add_dependencies(mynteye_wrapper ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 add_executable(mynteye_wrapper_node src/wrapper_node.cc)
 target_link_libraries(mynteye_wrapper_node mynteye_wrapper ${LINK_LIBS})
@@ -132,12 +130,12 @@ install(TARGETS mynteye_wrapper mynteye_wrapper_node
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
-install(DIRECTORY launch
-  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
 )
 
-install(DIRECTORY rviz
-  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+install(DIRECTORY rviz/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rviz
 )
 
 install(FILES nodelet_plugins.xml
