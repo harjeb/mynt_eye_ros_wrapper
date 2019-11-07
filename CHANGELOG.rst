@@ -2,8 +2,8 @@
 Changelog for package mynt_eye_ros_wrapper
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.1.5 (2019-11-07)
+------------------
 * update
 * code update
 * fix depend
